@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Tom",
+      "surname": "Jones",
+      "date": "2022-12-31",
+      "passport": "AB-09882018",
+      "gender": "man",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Mariya",
+      "surname": "Ivanova",
+      "date": "2022-12-31",
+      "passport": "AB-09882018",
+      "gender": "woman",
+      "active": false
+    },
+    {
+      "id": 3,
+      "name": "Ekaterina",
+      "surname": "Ekaterinova",
+      "date": "2022-12-31",
+      "passport": "AB-09882018",
+      "gender": "man",
+      "active": true
+    }
+  ],
+
+
+  "document": [
+    {
+      "id": 1,
+      "documentType": "счет-фактура",
+      "documentNumber": 124,
+      "documentDate": "2022-01-01",
+      "description": "Оплата за товар",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+    {
+      "id": 2,
+      "documentType": "доверенность",
+      "documentNumber": 4321,
+      "documentDate": "2022-01-01",
+      "description": "Доверенность",
+      "invoiceType": null,
+      "user_id": 3
+    }
+  ]
+}

@@ -7,7 +7,11 @@
 
 
       <div class="main-panel">
-        <Content><RouterView></RouterView></Content>
+
+        <Content>
+          <RouterView></RouterView>
+        </Content>
+
         <Footer/>
       </div>
 
