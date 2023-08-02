@@ -36,7 +36,7 @@
               </td>
               <td>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                  <button type="button" class="btn btn-outline-primary btn-fw">Открыть</button>
+                  <button type="button" class="btn btn-outline-primary btn-fw" @click="this.$router.push('/users/'+user.id)">Открыть</button>
                   <button type="button" class="btn btn-outline-success btn-fw" data-toggle="modal" data-target="#exampleModal" @click="getEdit(user.id)">Изменить</button>
                   <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteUser(user.id)">Удалить</button>
                 </div>

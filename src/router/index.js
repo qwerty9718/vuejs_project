@@ -6,19 +6,26 @@ const routes = [
   {
     path: '/users',
     name: 'users',
-    component: () => import( '@/views/Users.vue')
+    component: () => import( '@/views/User/Users.vue')
+  },
+
+
+  {
+    path: '/users/:id',
+    name: 'users.single',
+    component: () => import( '@/views/User/SinglePage.vue')
   },
 
   {
     path: '/users-create',
     name: 'users.create',
-    component: () => import('@/views/CreatUser.vue')
+    component: () => import('@/views/User/CreatUser.vue')
   },
 
   {
     path: '/documents',
     name: 'documents',
-    component: () => import( '@/views/Documents.vue')
+    component: () => import( '@/views/Document/Documents.vue')
   },
 
   {
