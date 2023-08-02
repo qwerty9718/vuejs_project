@@ -2,7 +2,18 @@
   <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Список Сотрудников</h4>
+        <div class="container-fluid" style="display: flex; justify-content: space-between">
+          <h4 class="card-title">Список Сотрудников</h4>
+
+          <!--   Поиск   -->
+          <div class="input-group w-25">
+            <div class="input-group-prepend hover-cursor" id="navbar-search-icon"><span class="input-group-text" id="search"><i class="icon-search"></i></span></div>
+            <input type="text" class="form-control" id="navbar-search-input" placeholder="Поиск ..." v-model="searchQuery">
+          </div>
+
+
+        </div>
+
 
         <div class="table-responsive">
           <table class="table table-striped">
@@ -19,7 +30,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="user in users" :key="user.id">
+            <tr v-for="user in searchedUsers" :key="user.id">
               <td class="py-1"><img src="/template/user-img.png" alt="image"></td>
               <td>{{ user.id }}</td>
               <td>{{ user.name }} {{ user.surname }}</td>
@@ -48,7 +59,7 @@
         </div>
       </div>
       <div class="container-fluid">
-        <nav aria-label="Page navigation example" v-if="totalPage">
+        <nav aria-label="Page navigation example" v-if="totalPage && this.searchQuery === ''">
           <ul class="pagination">
             <li class="page-item"><a class="page-link" @click.prevent="nextPage('-')">пред</a></li>
             <li class="page-item"  v-for="total in totalPage"><a class="page-link" @click.prevent="paginateUsers(total)">{{total}}</a></li>
@@ -76,11 +87,17 @@ export default defineComponent({
   components: {ModalView},
   data() {
     return {
-
+      searchQuery: '',
+      searchArray:[]
     }
   },
 
   methods: {
+
+    async getSearchArray(){
+      const response = await axios.get(' http://localhost:3000/users');
+      this.searchArray = response.data;
+    },
 
     ...mapActions({
       getUsers:'user/getUsers',
@@ -114,6 +131,18 @@ export default defineComponent({
     ...mapGetters({
 
     }),
+
+    searchedUsers() {
+      if (this.searchQuery === ''){
+        return this.users;
+      }
+      else {
+        this.getSearchArray();
+        return  this.searchArray.filter(user => user.name.toLowerCase().includes(this.searchQuery.toLowerCase()))
+      }
+      // return [...this.users].filter(user => user.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+      // return this.sortedPosts.filter(post => post.title.toLowerCase().includes(this.searchQuery.toLowerCase()));
+    }
   }
 })
 </script>
