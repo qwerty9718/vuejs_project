@@ -4,32 +4,40 @@
       "id": 1,
       "name": "Tom",
       "surname": "Jones",
-      "date": "2022-12-31",
-      "passport": "AB-09882018",
-      "gender": "man",
-      "active": true
+      "date": "1992-06-17",
+      "passport": "AC-09882018",
+      "gender": "",
+      "active": false
     },
     {
       "id": 2,
       "name": "Mariya",
       "surname": "Ivanova",
-      "date": "2022-12-31",
+      "date": "1983-09-15",
       "passport": "AB-09882018",
-      "gender": "woman",
+      "gender": "мужской",
       "active": false
     },
     {
       "id": 3,
       "name": "Ekaterina",
-      "surname": "Ekaterinova",
-      "date": "2022-12-31",
+      "surname": "Ekaterin",
+      "date": "2000-04-03",
       "passport": "AB-09882018",
-      "gender": "man",
+      "gender": "женский",
+      "active": true,
+      "true": ""
+    },
+    {
+      "id": 4,
+      "name": "Dmintriy",
+      "surname": "Surukov",
+      "date": "1993-12-15",
+      "passport": "AB-09882018",
+      "gender": "",
       "active": true
     }
   ],
-
-
   "document": [
     {
       "id": 1,
@@ -40,7 +48,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
     {
       "id": 2,
       "documentType": "доверенность",
@@ -49,6 +56,40 @@
       "description": "Доверенность",
       "invoiceType": null,
       "user_id": 3
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "title": "Сотрудники",
+      "icon": "icon-head menu-icon",
+      "code": "user",
+      "items": [
+        {
+          "title": "Список сотрудников",
+          "link": "users"
+        },
+        {
+          "title": "Создать",
+          "link": "users.create"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Документы",
+      "icon": "icon-paper menu-icon",
+      "code": "document",
+      "items": [
+        {
+          "title": "Список документов",
+          "link": "documents"
+        },
+        {
+          "title": "Создать",
+          "link": "documents.create"
+        }
+      ]
     }
   ]
 }

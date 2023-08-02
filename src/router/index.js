@@ -10,9 +10,19 @@ const routes = [
   },
 
   {
+    path: '/users-create',
+    name: 'users.create',
+  },
+
+  {
     path: '/documents',
     name: 'documents',
     component: () => import( '@/views/Documents.vue')
+  },
+
+  {
+    path: '/documents-create',
+    name: 'documents.create',
   },
 ]
 
