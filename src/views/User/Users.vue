@@ -3,6 +3,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Список Сотрудников</h4>
+
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -28,7 +29,7 @@
               <td>
                 <div class="form-check form-check-success">
                   <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" :checked="user.active" @click="setActive(user.active,user.id)">
+                    <input type="checkbox" class="form-check-input" :checked="user.active" @click="setActive(user.id)">
                     {{ user.active ? 'Активен' : 'Не активен' }}
                     <i class="input-helper"></i>
                   </label>
@@ -68,81 +69,51 @@
 import {defineComponent} from 'vue'
 import axios from "axios";
 import ModalView from "@/components/html/ModalView.vue";
-/*
-1) Установить Axios для async запросов к Базе данных
-2) Функция getUsers берет из БД Список пользователей
-3) Циклом V-For отображаем список пользователей
-4) Функция setActive Устанавливет активен пользователь или нет
-5) Функция getEdit Получает данные пользователя которые нужно изменить
-6) Функция updateUser обновляет данные пользователя и затем отрисовавет изменения
-7) Функция DeleteUser удалаяет пользователя по id
-8) Функция paginateUsers принимиет номер страницы и переходит на нее
-9) Функция nextPage переходит на следеющую и предыдущую страницу в зависимости от получаемых данных
- */
+import {mapState,mapMutations,mapGetters,mapActions} from "vuex";
+
 export default defineComponent({
   name: "Users",
   components: {ModalView},
   data() {
     return {
-      users: [],
-      editUser: null,
-      page: 1,
-      limit: 10,
-      totalPage: 0,
+
     }
   },
 
   methods: {
-    async getUsers() {
-      const response = await axios.get('http://localhost:3000/users',
-          {params: {_page: this.page, _limit: this.limit}});
-      this.totalPage = Math.ceil(response.headers['x-total-count'] / this.limit);
-      this.users = response.data;
-    },
 
-    async setActive(active, id) {
-      let data = Boolean;
-      if (active === true) {data = false;}
-      if (active === false) {data = true;}
-      const response = await axios.patch(' http://localhost:3000/users/' + id, {active: data});
-      this.getUsers();
-    },
+    ...mapActions({
+      getUsers:'user/getUsers',
+      getEdit: 'user/getEdit',
+      updateUser:'user/updateUser',
+      setActive:'user/setActive',
+      deleteUser: 'user/deleteUser',
+      paginateUsers:'user/paginateUsers',
+      nextPage: 'user/nextPage'
+    }),
 
-    async getEdit(id){
-      const response = await axios.get(' http://localhost:3000/users/'+id);
-      this.editUser = response.data;
-    },
+    ...mapMutations({
 
-    async updateUser(id,data){
-      const response = await axios.patch('http://localhost:3000/users/'+id,data);
-      this.getUsers();
-    },
-
-    async deleteUser(id){
-      const response = await axios.delete('http://localhost:3000/users/'+id);
-      this.getUsers();
-    },
-
-    paginateUsers(page){
-      this.page = page;
-      this.getUsers();
-    },
-    nextPage(data){
-      if (data === '-' && this.page > 1){
-        this.page--;
-        this.getUsers();
-      }
-      if (data === '+' && this.page < this.totalPage){
-        this.page++;
-        this.getUsers();
-      }
-    }
+    }),
 
   },
 
 
   mounted() {
     this.getUsers();
+  },
+
+  computed:{
+    ...mapState({
+      users: state => state.user.users,
+      editUser: state => state.user.editUser,
+      page: state => state.user.page,
+      limit: state => state.user.limit,
+      totalPage: state => state.user.totalPage,
+    }),
+    ...mapGetters({
+
+    }),
   }
 })
 </script>
