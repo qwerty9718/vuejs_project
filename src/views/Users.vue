@@ -8,6 +8,7 @@
             <thead>
             <tr>
               <th></th>
+              <th>Id</th>
               <th>Имя</th>
               <th>Дата рождения</th>
               <th>Серия и номер паспорта</th>
@@ -19,6 +20,7 @@
             <tbody>
             <tr v-for="user in users" :key="user.id">
               <td class="py-1"><img src="/template/user-img.png" alt="image"></td>
+              <td>{{ user.id }}</td>
               <td>{{ user.name }} {{ user.surname }}</td>
               <td>{{ user.date }}</td>
               <td>{{ user.passport }}</td>
@@ -35,7 +37,7 @@
               <td>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                   <button type="button" class="btn btn-outline-success btn-fw" data-toggle="modal" data-target="#exampleModal" @click="getEdit(user.id)">Изменить</button>
-                  <button type="button" class="btn btn-outline-danger btn-fw">Удалить</button>
+                  <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteUser(user.id)">Удалить</button>
                 </div>
               </td>
             </tr>
@@ -95,6 +97,11 @@ export default defineComponent({
 
     async updateUser(id,data){
       const response = await axios.patch('http://localhost:3000/users/'+id,data);
+      this.getUsers();
+    },
+
+    async deleteUser(id){
+      const response = await axios.delete('http://localhost:3000/users/'+id);
       this.getUsers();
     }
 

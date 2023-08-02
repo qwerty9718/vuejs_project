@@ -12,6 +12,7 @@ const routes = [
   {
     path: '/users-create',
     name: 'users.create',
+    component: () => import('@/views/CreatUser.vue')
   },
 
   {
