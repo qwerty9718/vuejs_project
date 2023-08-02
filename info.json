@@ -232,7 +232,7 @@
       "date": "1982-04-27",
       "passport": "UI-43218765",
       "gender": "мужской",
-      "active": true
+      "active": false
     },
     {
       "id": 27,
@@ -303,24 +303,6 @@
       "surname": "Lewis",
       "date": "1987-03-05",
       "passport": "GF-95143268",
-      "gender": "мужской",
-      "active": true
-    },
-    {
-      "id": 35,
-      "name": "Mia",
-      "surname": "Hill",
-      "date": "1994-04-25",
-      "passport": "ED-75395142",
-      "gender": "женский",
-      "active": false
-    },
-    {
-      "id": 36,
-      "name": "Alexander",
-      "surname": "Hall",
-      "date": "1999-02-11",
-      "passport": "UJ-24681359",
       "gender": "мужской",
       "active": true
     },

@@ -36,6 +36,7 @@
               </td>
               <td>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                  <button type="button" class="btn btn-outline-primary btn-fw">Открыть</button>
                   <button type="button" class="btn btn-outline-success btn-fw" data-toggle="modal" data-target="#exampleModal" @click="getEdit(user.id)">Изменить</button>
                   <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteUser(user.id)">Удалить</button>
                 </div>
@@ -44,6 +45,15 @@
             </tbody>
           </table>
         </div>
+      </div>
+      <div class="container-fluid">
+        <nav aria-label="Page navigation example" v-if="totalPage">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" @click.prevent="nextPage('-')">пред</a></li>
+            <li class="page-item"  v-for="total in totalPage"><a class="page-link" @click.prevent="paginateUsers(total)">{{total}}</a></li>
+            <li class="page-item"><a class="page-link" @click.prevent="nextPage('+')">след</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
@@ -65,6 +75,9 @@ import ModalView from "@/components/html/ModalView.vue";
 4) Функция setActive Устанавливет активен пользователь или нет
 5) Функция getEdit Получает данные пользователя которые нужно изменить
 6) Функция updateUser обновляет данные пользователя и затем отрисовавет изменения
+7) Функция DeleteUser удалаяет пользователя по id
+8) Функция paginateUsers принимиет номер страницы и переходит на нее
+9) Функция nextPage переходит на следеющую и предыдущую страницу в зависимости от получаемых данных
  */
 export default defineComponent({
   name: "Users",
@@ -73,12 +86,17 @@ export default defineComponent({
     return {
       users: [],
       editUser: null,
+      page: 1,
+      limit: 10,
+      totalPage: 0,
     }
   },
 
   methods: {
     async getUsers() {
-      const response = await axios.get('http://localhost:3000/users');
+      const response = await axios.get('http://localhost:3000/users',
+          {params: {_page: this.page, _limit: this.limit}});
+      this.totalPage = Math.ceil(response.headers['x-total-count'] / this.limit);
       this.users = response.data;
     },
 
@@ -103,6 +121,21 @@ export default defineComponent({
     async deleteUser(id){
       const response = await axios.delete('http://localhost:3000/users/'+id);
       this.getUsers();
+    },
+
+    paginateUsers(page){
+      this.page = page;
+      this.getUsers();
+    },
+    nextPage(data){
+      if (data === '-' && this.page > 1){
+        this.page--;
+        this.getUsers();
+      }
+      if (data === '+' && this.page < this.totalPage){
+        this.page++;
+        this.getUsers();
+      }
     }
 
   },
