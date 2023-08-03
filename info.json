@@ -419,7 +419,7 @@
     {
       "id": 1,
       "documentType": "счет-фактура",
-      "documentNumber": 124,
+      "documentNumber": 1241,
       "documentDate": "2018-01-10",
       "description": "Оплата за товар ",
       "invoiceType": "стандартная",
@@ -498,20 +498,11 @@
       "user_id": null
     },
     {
-      "id": 12,
-      "documentType": "счет-фактура",
-      "documentNumber": 147,
-      "documentDate": "2021-12-10",
-      "description": "Аренда офисного помещения",
-      "invoiceType": "стандартная",
-      "user_id": null
-    },
-    {
       "id": 13,
       "documentType": "счет-фактура",
-      "documentNumber": 369,
-      "documentDate": "2022-05-05",
-      "description": "Оплата за электроэнергию",
+      "documentNumber": 369123213,
+      "documentDate": "2019-10-05",
+      "description": "Оплата за электроэнергию ",
       "invoiceType": "стандартная",
       "user_id": null
     },
@@ -676,15 +667,6 @@
       "description": "Доверенность",
       "invoiceType": null,
       "user_id": 2
-    },
-    {
-      "documentType": "",
-      "documentNumber": null,
-      "documentDate": "",
-      "description": "",
-      "invoiceType": "",
-      "user_id": null,
-      "id": 32
     },
     {
       "documentType": "asdasd",

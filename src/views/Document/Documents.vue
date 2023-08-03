@@ -20,39 +20,31 @@
           <template v-for="document in documents" :key="document.id">
 
 
-          <tr :class="isEdit(document.id) ? 'd-none' : ''">
-            <td>{{ document.id }}</td>
-            <td>{{ document.documentType }}</td>
-            <td>{{document.documentNumber}}</td>
-            <td>{{document.documentDate}}</td>
-            <td>{{document.description}}</td>
-            <td>{{document.invoiceType}}</td>
-            <td><router-link :to="{name:'users.single', params: { id: `${document.user_id}` }}">{{document.user}}</router-link></td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-primary btn-fw" @click="this.$router.push('/documents/'+document.id)">Открыть</button>
-                <button type="button" class="btn btn-outline-success btn-fw" @click="getUpdateId(document.id,document.documentType,document.documentNumber,document.documentDate,document.description,document.invoiceType)">Изменить</button>
-                <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteDocument(document.id)">Удалить</button>
-              </div>
-            </td>
-          </tr>
-
-          <tr :class="isEdit(document.id) ? '' : 'd-none'">
-            <td>{{ document.id }}</td>
-            <td><input type="text" class="form-control" v-model="updateDocument.documentType"></td>
-            <td><input type="number" class="form-control" v-model="updateDocument.documentNumber"></td>
-            <td><input  type="date" min="1900-01-01" max="2999-12-31" id="sq_100i" placeholder="" aria-required="true" aria-labelledby="sq_100_ariaTitle" aria-invalid="false" class="sd-input sd-text form-control" data-gtm-form-interact-field-id="0" v-model="updateDocument.documentDate"></td>
-            <td><input type="text" class="form-control" v-model="updateDocument.description"></td>
-            <td><input type="text" class="form-control" v-model="updateDocument.invoiceType"></td>
-            <td><router-link :to="{name:'users.single', params: { id: `${document.user_id}` }}">{{document.user}}</router-link></td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-success btn-fw" @click="updateDocumentDb">Обновить</button>
-                <button type="button" class="btn btn-outline-success btn-fw" @click="getUpdateId(null)">Изменить</button>
-                <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteDocument(document.id)">Удалить</button>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <td>{{ document.id }}</td>
+              <td>{{ document.documentType }}</td>
+              <td>{{ document.documentNumber }}</td>
+              <td>{{ document.documentDate }}</td>
+              <td>{{ document.description }}</td>
+              <td>{{ document.invoiceType }}</td>
+              <td>
+                <router-link :to="{name:'users.single', params: { id: `${document.user_id}` }}">{{ document.user }}
+                </router-link>
+              </td>
+              <td>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                  <button type="button" class="btn btn-outline-primary btn-fw"
+                          @click="this.$router.push('/documents/'+document.id)">Открыть
+                  </button>
+                  <button type="button" class="btn btn-outline-success btn-fw" data-toggle="modal"
+                          data-target="#exampleModal" @click="modalUpdateDocument(document.id,document.documentType,document.documentNumber,document.documentDate,document.description, document.invoiceType)">Изменить
+                  </button>
+                  <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteDocument(document.id)">
+                    Удалить
+                  </button>
+                </div>
+              </td>
+            </tr>
 
           </template>
           </tbody>
@@ -62,7 +54,8 @@
           <nav aria-label="Page navigation example" v-if="totalPage">
             <ul class="pagination">
               <li class="page-item paginate"><a class="page-link" @click.prevent="nextPage('-')">пред</a></li>
-              <li class="page-item"  v-for="total in totalPage"><a class="page-link" @click.prevent="pagination(total)">{{total}}</a></li>
+              <li class="page-item" v-for="total in totalPage"><a class="page-link" @click.prevent="pagination(total)">{{ total }}</a>
+              </li>
               <li class="page-item paginate"><a class="page-link" @click.prevent="nextPage('+')">след</a></li>
             </ul>
           </nav>
@@ -72,6 +65,65 @@
   </div>
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card" style="margin: auto">
+            <div class="card-body">
+              <form class="forms-sample">
+
+                <div class="form-group">
+                  <label>Тип документа</label>
+                  <input type="text" class="form-control" placeholder="Введите тип доумента"
+                         v-model="updateDocument.documentType">
+                </div>
+
+                <div class="form-group">
+                  <label>Номер документа</label>
+                  <input type="number" class="form-control" placeholder="Введите номер"
+                         v-model="updateDocument.documentNumber">
+                </div>
+
+                <div class="form-group">
+                  <label>Дата документа</label>
+                  <input type="date" min="1900-01-01" max="2999-12-31" id="sq_100i" placeholder="" aria-required="true"
+                         aria-labelledby="sq_100_ariaTitle" aria-invalid="false" class="sd-input sd-text form-control"
+                         data-gtm-form-interact-field-id="0" v-model="updateDocument.documentDate">
+                </div>
+
+                <div class="form-group">
+                  <label>Описание</label>
+                  <input type="text" class="form-control" placeholder="Введите описание"
+                         v-model="updateDocument.description">
+                </div>
+
+                <div class="form-group">
+                  <label>Тип счет-фактуры</label>
+                  <input type="text" class="form-control" placeholder="Введите тип счет фактуры"
+                         v-model="updateDocument.invoiceType">
+                </div>
+
+
+                <button type="button" class="btn btn-primary mr-2" @click="saveChanges" data-dismiss="modal">изменить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </template>
@@ -80,71 +132,49 @@
 <script>
 import {defineComponent} from 'vue'
 import axios from "axios";
+import {mapActions, mapGetters, mapMutations, mapState} from "vuex";
 
 export default defineComponent({
   name: "Documents",
   data() {
     return {
-      documents: [],
-      showUpdateId: null,
-      updateDocument:{documentType:'', documentNumber:null, documentDate:null,description:'',invoiceType:'',id:null},
-      page: 1,
-      limit:10,
-      totalPage:null
+      updateDocument: {
+        id: null,
+        documentType: '',
+        documentNumber: null,
+        documentDate: '',
+        description: '',
+        invoiceType: ''
+      }
     }
   },
 
   methods: {
-    async getDocuments() {
-      const response = await axios.get('http://localhost:3000/document',
-          {params:{_page: this.page, _limit:this.limit}});
-      this.totalPage = Math.ceil(response.headers['x-total-count'] / this.limit);
-      this.documents = response.data;
 
-      for (let i = 0; i <response.data.length ; i++) {
-        if (response.data[i].user_id !== null){
-          const users = await axios.get('http://localhost:3000/users/'+response.data[i].user_id);
-          this.documents[i].user = users.data.name + ' ' + users.data.surname;
-        }
-      }
+    ...mapActions({
+      getDocuments: 'document/getDocuments',
+      pagination: 'document/pagination',
+      nextPage: 'document/nextPage',
+      deleteDocument: 'document/deleteDocument'
+    }),
+
+    ...mapMutations({}),
+
+
+    modalUpdateDocument(id,documentType,documentNumber,documentDate,description, invoiceType){
+      this.updateDocument = {
+        id: id,
+        documentType: documentType,
+        documentNumber: documentNumber,
+        documentDate: documentDate,
+        description: description,
+        invoiceType: invoiceType}
     },
 
-    getUpdateId(id,docType,docNumber,docDate,docDescription,docInvoiceType){
-      this.showUpdateId = id;
-      this.updateDocument = {documentType:docType, documentNumber:docNumber, documentDate:docDate, description:docDescription, invoiceType: docInvoiceType, id: id}
-    },
-
-    isEdit(id){
-      return this.showUpdateId === id;
-    },
-
-    async updateDocumentDb(){
-      const data = {documentType: this.updateDocument.documentType, documentNumber:this.updateDocument.documentNumber, documentDate:this.updateDocument.documentDate,description:this.updateDocument.description,invoiceType:this.updateDocument.invoiceType};
-      const response = await axios.patch('http://localhost:3000/document/'+this.updateDocument.id,data);
-      this.showUpdateId = null;
+    async saveChanges(){
+      const response = await axios.patch('http://localhost:3000/document/'+this.updateDocument.id,this.updateDocument);
       this.getDocuments();
-    },
 
-
-    pagination(page){
-      this.page = page;
-      this.getDocuments();
-    },
-
-    nextPage(data){
-      if (data === '-' && this.page > 0){
-        this.page-=1;
-        this.getDocuments();
-      }
-      if (data === '+' && this.page < this.totalPage){
-        this.page+=1;
-        this.getDocuments();
-      }
-    },
-
-    async deleteDocument(id){
-      const response = await axios.delete(' http://localhost:3000/document/'+id);
-      this.getDocuments();
     }
 
   },
@@ -153,6 +183,17 @@ export default defineComponent({
   mounted() {
     this.getDocuments();
 
+  },
+
+
+  computed: {
+    ...mapState({
+      documents: state => state.document.documents,
+      page: state => state.document.page,
+      limit: state => state.document.limit,
+      totalPage: state => state.document.totalPage,
+    }),
+    ...mapGetters({}),
   }
 })
 </script>
