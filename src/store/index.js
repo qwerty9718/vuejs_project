@@ -1,14 +1,13 @@
 import { createStore } from 'vuex'
+import {userModule} from "@/store/userModule";
+import axios from "axios";
+import {documentModule} from "@/store/documentModule";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+
   modules: {
+    user:userModule,
+    document:documentModule
   }
+
 })

@@ -1,0 +1,715 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Tom",
+      "surname": "Jones",
+      "date": "1992-06-17",
+      "passport": "AC-09882018",
+      "gender": "",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "surname": "Smith",
+      "date": "1985-09-10",
+      "passport": "BD-12345678",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Emily",
+      "surname": "Brown",
+      "date": "1990-03-25",
+      "passport": "EF-98765432",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Michael",
+      "surname": "Johnson",
+      "date": "1988-12-01",
+      "passport": "GH-56781234",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 5,
+      "name": "Sophia",
+      "surname": "Martinez",
+      "date": "1995-07-19",
+      "passport": "IJ-87654321",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "James",
+      "surname": "Taylor",
+      "date": "1983-11-03",
+      "passport": "KL-43218765",
+      "gender": "",
+      "active": true
+    },
+    {
+      "id": 7,
+      "name": "Olivia",
+      "surname": "Miller",
+      "date": "1998-04-12",
+      "passport": "MN-76543218",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 8,
+      "name": "Daniel",
+      "surname": "Wilson",
+      "date": "1991-08-27",
+      "passport": "OP-32187654",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 9,
+      "name": "Ava",
+      "surname": "Anderson",
+      "date": "1997-02-08",
+      "passport": "QR-65432187",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 10,
+      "name": "William",
+      "surname": "Thomas",
+      "date": "1987-05-15",
+      "passport": "ST-23456781",
+      "gender": "",
+      "active": true
+    },
+    {
+      "id": 11,
+      "name": "Alex",
+      "surname": "Johnson",
+      "date": "1993-09-20",
+      "passport": "AC-09882018",
+      "gender": "",
+      "active": false
+    },
+    {
+      "id": 12,
+      "name": "Ethan",
+      "surname": "Williams",
+      "date": "1986-11-12",
+      "passport": "BD-12345678",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 13,
+      "name": "Isabella",
+      "surname": "Taylor",
+      "date": "1991-05-03",
+      "passport": "EF-98765432",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 14,
+      "name": "Joshua",
+      "surname": "Brown",
+      "date": "1989-02-27",
+      "passport": "GH-56781234",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 15,
+      "name": "Emma",
+      "surname": "Jackson",
+      "date": "1996-10-06",
+      "passport": "IJ-87654321",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 16,
+      "name": "Liam",
+      "surname": "Garcia",
+      "date": "1984-03-15",
+      "passport": "KL-43218765",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 17,
+      "name": "Mia",
+      "surname": "Anderson",
+      "date": "1999-08-24",
+      "passport": "MN-76543218",
+      "gender": "",
+      "active": true
+    },
+    {
+      "id": 18,
+      "name": "Lucas",
+      "surname": "Wilson",
+      "date": "1992-01-04",
+      "passport": "OP-32187654",
+      "gender": "",
+      "active": true
+    },
+    {
+      "id": 19,
+      "name": "Sophie",
+      "surname": "Harris",
+      "date": "1998-06-17",
+      "passport": "QR-65432187",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 20,
+      "name": "Carter",
+      "surname": "Jones",
+      "date": "1988-12-31",
+      "passport": "ST-23456781",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 21,
+      "name": "Olivia",
+      "surname": "Martin",
+      "date": "1995-07-28",
+      "passport": "UY-87654321",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 22,
+      "name": "Noah",
+      "surname": "Thompson",
+      "date": "1985-09-10",
+      "passport": "AZ-98765432",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 23,
+      "name": "Ava",
+      "surname": "Rodriguez",
+      "date": "1997-03-22",
+      "passport": "QW-12345678",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 24,
+      "name": "James",
+      "surname": "Lee",
+      "date": "1983-06-07",
+      "passport": "ER-56781234",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 25,
+      "name": "Charlotte",
+      "surname": "Gonzalez",
+      "date": "1994-11-19",
+      "passport": "TY-87654321",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 26,
+      "name": "Mason",
+      "surname": "Perez",
+      "date": "1982-04-27",
+      "passport": "UI-43218765",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 27,
+      "name": "Amelia",
+      "surname": "Mitchell",
+      "date": "1990-10-14",
+      "passport": "QA-76543218",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 29,
+      "name": "Avery",
+      "surname": "Wright",
+      "date": "1996-05-13",
+      "passport": "ED-65432187",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 30,
+      "name": "Evelyn",
+      "surname": "Turner",
+      "date": "1991-12-28",
+      "passport": "FG-23456781",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 31,
+      "name": "Sophia",
+      "surname": "Walker",
+      "date": "1998-08-15",
+      "passport": "OL-13579246",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 32,
+      "name": "Liam",
+      "surname": "Harris",
+      "date": "1992-07-03",
+      "passport": "KJ-97531462",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 33,
+      "name": "Isabella",
+      "surname": "Clark",
+      "date": "1993-06-18",
+      "passport": "NH-24681357",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 34,
+      "name": "Elijah",
+      "surname": "Lewis",
+      "date": "1987-03-05",
+      "passport": "GF-95143268",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 37,
+      "name": "Harper",
+      "surname": "Young",
+      "date": "1998-01-07",
+      "passport": "YH-97531468",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 38,
+      "name": "Jameson",
+      "surname": "Allen",
+      "date": "1995-09-23",
+      "passport": "LK-13579248",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 39,
+      "name": "Scarlett",
+      "surname": "King",
+      "date": "1997-12-17",
+      "passport": "PO-95143267",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 40,
+      "name": "Lucas",
+      "surname": "Scott",
+      "date": "1996-11-03",
+      "passport": "IM-75395147",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 41,
+      "name": "Olivia",
+      "surname": "Smith",
+      "date": "1990-10-20",
+      "passport": "AB-12345678",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 42,
+      "name": "Ava",
+      "surname": "Johnson",
+      "date": "1995-05-12",
+      "passport": "CD-87654321",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 43,
+      "name": "Noah",
+      "surname": "Brown",
+      "date": "1993-04-06",
+      "passport": "EF-19283746",
+      "gender": "мужской",
+      "active": false
+    },
+    {
+      "id": 44,
+      "name": "Emma 1",
+      "surname": "Davis",
+      "date": "1988-11-26",
+      "passport": "GH-46573829",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 45,
+      "name": "Oliver",
+      "surname": "Wilson",
+      "date": "1991-09-08",
+      "passport": "IJ-92837465",
+      "gender": "мужской",
+      "active": true
+    },
+    {
+      "id": 46,
+      "name": "Ava",
+      "surname": "Anderson",
+      "date": "1999-07-17",
+      "passport": "KL-64739281",
+      "gender": "женский",
+      "active": false
+    },
+    {
+      "id": 47,
+      "name": "Sophia",
+      "surname": "Taylor",
+      "date": "1997-06-12",
+      "passport": "MN-28374659",
+      "gender": "женский",
+      "active": true
+    },
+    {
+      "id": 49,
+      "name": "Mia",
+      "surname": "Robinson",
+      "date": "1994-03-24",
+      "passport": "QR-62739485",
+      "gender": "",
+      "active": false
+    },
+    {
+      "id": 50,
+      "name": "James",
+      "surname": "Clarkson",
+      "date": "1992-12-09",
+      "passport": "ST-49586732",
+      "gender": "мужской",
+      "active": true
+    }
+  ],
+  "document": [
+    {
+      "id": 1,
+      "documentType": "счет-фактура",
+      "documentNumber": 1241,
+      "documentDate": "2018-01-10",
+      "description": "Оплата за товар ",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 2,
+      "documentType": "счет-фактура",
+      "documentNumber": 325,
+      "documentDate": "2022-02-15",
+      "description": "Ремонт водопровода",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 3,
+      "documentType": "доверенность",
+      "documentNumber": 4322,
+      "documentDate": "2022-01-02",
+      "description": "Заявление о выдаче паспорта",
+      "invoiceType": null,
+      "user_id": 8
+    },
+    {
+      "id": 4,
+      "documentType": "доверенность",
+      "documentNumber": 4323,
+      "documentDate": "2022-01-03",
+      "description": "Уведомление об отзыве лицензии",
+      "invoiceType": null,
+      "user_id": 11
+    },
+    {
+      "id": 5,
+      "documentType": "доверенность",
+      "documentNumber": 4324,
+      "documentDate": "2022-01-04",
+      "description": "Договор аренды недвижимости",
+      "invoiceType": null,
+      "user_id": 20
+    },
+    {
+      "id": 6,
+      "documentType": "счет-фактура",
+      "documentNumber": 456,
+      "documentDate": "2021-09-05",
+      "description": "Получение оборудования",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 7,
+      "documentType": "счет-фактура",
+      "documentNumber": 852,
+      "documentDate": "2022-06-25",
+      "description": "Выдача материалов",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 8,
+      "documentType": "счет-фактура",
+      "documentNumber": 369,
+      "documentDate": "2021-11-15",
+      "description": "Оплата за услугу связи",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 9,
+      "documentType": "счет-фактура",
+      "documentNumber": 741,
+      "documentDate": "2022-07-07",
+      "description": "Проверка бухгалтерии",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 13,
+      "documentType": "счет-фактура",
+      "documentNumber": 369123213,
+      "documentDate": "2019-10-05",
+      "description": "Оплата за электроэнергию ",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 14,
+      "documentType": "счет-фактура",
+      "documentNumber": 741,
+      "documentDate": "2021-10-20",
+      "description": "Оплата за аренду транспорта",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 15,
+      "documentType": "доверенность",
+      "documentNumber": 4328,
+      "documentDate": "2022-01-08",
+      "description": "Протокол собрания акционеров",
+      "invoiceType": null,
+      "user_id": 8
+    },
+    {
+      "id": 16,
+      "documentType": "счет-фактура",
+      "documentNumber": 963,
+      "documentDate": "2021-09-01",
+      "description": "Оплата за рекламные услуги",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 17,
+      "documentType": "счет-фактура",
+      "documentNumber": 147,
+      "documentDate": "2022-02-25",
+      "description": "Оплата за аренду компьютеров",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 18,
+      "documentType": "счет-фактура",
+      "documentNumber": 369,
+      "documentDate": "2021-07-15",
+      "description": "Отгрузка товара",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 19,
+      "documentType": "счет-фактура",
+      "documentNumber": 741,
+      "documentDate": "2022-03-07",
+      "description": "Оказание маркетинговых услуг",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 20,
+      "documentType": "счет-фактура",
+      "documentNumber": 258,
+      "documentDate": "2021-11-22",
+      "description": "Покупка нового программного обеспечения",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 21,
+      "documentType": "доверенность",
+      "documentNumber": 4329,
+      "documentDate": "2022-01-09",
+      "description": "Исковое заявление о разводе",
+      "invoiceType": null,
+      "user_id": 10
+    },
+    {
+      "id": 22,
+      "documentType": "счет-фактура",
+      "documentNumber": 789,
+      "documentDate": "2021-05-20",
+      "description": "Оказание услуги",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 23,
+      "documentType": "счет-фактура",
+      "documentNumber": 987,
+      "documentDate": "2022-03-10",
+      "description": "Покупка продуктов",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 24,
+      "documentType": "доверенность",
+      "documentNumber": 4325,
+      "documentDate": "2022-01-05",
+      "description": "Расписка о получении денежных средств",
+      "invoiceType": null,
+      "user_id": 21
+    },
+    {
+      "id": 25,
+      "documentType": "доверенность",
+      "documentNumber": 4326,
+      "documentDate": "2022-01-06",
+      "description": "Соглашение о разделе имущества",
+      "invoiceType": null,
+      "user_id": 20
+    },
+    {
+      "id": 26,
+      "documentType": "доверенность",
+      "documentNumber": 4327,
+      "documentDate": "2022-01-07",
+      "description": "Заключение о состоянии здоровья",
+      "invoiceType": null,
+      "user_id": 20
+    },
+    {
+      "id": 27,
+      "documentType": "счет-фактура",
+      "documentNumber": 258,
+      "documentDate": "2022-04-15",
+      "description": "Покупка офисных расходных материалов",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 28,
+      "documentType": "счет-фактура",
+      "documentNumber": 512,
+      "documentDate": "2020-08-01",
+      "description": "Отгрузка товара",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 29,
+      "documentType": "доверенность",
+      "documentNumber": 4330,
+      "documentDate": "2022-01-10",
+      "description": "Справка об отсутствии судимости",
+      "invoiceType": null,
+      "user_id": 8
+    },
+    {
+      "id": 30,
+      "documentType": "счет-фактура",
+      "documentNumber": 258,
+      "documentDate": "2021-03-22",
+      "description": "Совещание",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 31,
+      "documentType": "доверенность",
+      "documentNumber": 4321,
+      "documentDate": "2022-01-01",
+      "description": "Доверенность",
+      "invoiceType": null,
+      "user_id": 2
+    },
+    {
+      "documentType": "asdasd",
+      "documentNumber": 123123,
+      "documentDate": "2023-08-11",
+      "description": "asdasd",
+      "invoiceType": "asdasdasd",
+      "user_id": 14,
+      "id": 33
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "title": "Сотрудники",
+      "icon": "icon-head menu-icon",
+      "code": "user",
+      "items": [
+        {
+          "title": "Список сотрудников",
+          "link": "users"
+        },
+        {
+          "title": "Создать",
+          "link": "users.create"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Документы",
+      "icon": "icon-paper menu-icon",
+      "code": "document",
+      "items": [
+        {
+          "title": "Список документов",
+          "link": "documents"
+        },
+        {
+          "title": "Создать",
+          "link": "documents.create"
+        }
+      ]
+    }
+  ]
+}

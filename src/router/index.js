@@ -1,20 +1,56 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 
 const routes = [
+
+
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'main',
+    component: () => import( '@/views/Main')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/users',
+    name: 'users',
+    component: () => import( '@/views/User/Users.vue')
+  },
+
+
+  {
+    path: '/users/:id',
+    name: 'users.single',
+    component: () => import( '@/views/User/SinglePage.vue')
+  },
+
+  {
+    path: '/users-create',
+    name: 'users.create',
+    component: () => import('@/views/User/CreatUser.vue')
+  },
+
+  {
+    path: '/documents',
+    name: 'documents',
+    component: () => import( '@/views/Document/Documents.vue')
+  },
+
+  {
+    path: '/documents/:id',
+    name: 'documents.single',
+    component: () => import( '@/views/Document/SinglePage')
+  },
+
+  {
+    path: '/documents-create',
+    name: 'documents.create',
+    component: () => import('@/views/Document/CreateDocument')
+  },
+
+  {
+    path: '/:catchAll(.*)',
+    component: () => import('@/views/Page404'),
+    name:'404'
+  },
 ]
 
 const router = createRouter({
