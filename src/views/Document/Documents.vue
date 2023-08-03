@@ -32,7 +32,7 @@
               <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <button type="button" class="btn btn-outline-primary btn-fw" @click="this.$router.push('/documents/'+document.id)">Открыть</button>
                 <button type="button" class="btn btn-outline-success btn-fw" @click="getUpdateId(document.id,document.documentType,document.documentNumber,document.documentDate,document.description,document.invoiceType)">Изменить</button>
-                <button type="button" class="btn btn-outline-danger btn-fw">Удалить</button>
+                <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteDocument(document.id)">Удалить</button>
               </div>
             </td>
           </tr>
@@ -49,7 +49,7 @@
               <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <button type="button" class="btn btn-outline-success btn-fw" @click="updateDocumentDb">Обновить</button>
                 <button type="button" class="btn btn-outline-success btn-fw" @click="getUpdateId(null)">Изменить</button>
-                <button type="button" class="btn btn-outline-danger btn-fw">Удалить</button>
+                <button type="button" class="btn btn-outline-danger btn-fw" @click="deleteDocument(document.id)">Удалить</button>
               </div>
             </td>
           </tr>
@@ -140,6 +140,11 @@ export default defineComponent({
         this.page+=1;
         this.getDocuments();
       }
+    },
+
+    async deleteDocument(id){
+      const response = await axios.delete(' http://localhost:3000/document/'+id);
+      this.getDocuments();
     }
 
   },

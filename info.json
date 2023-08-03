@@ -498,24 +498,6 @@
       "user_id": null
     },
     {
-      "id": 10,
-      "documentType": "доверенность",
-      "documentNumber": 4331,
-      "documentDate": "2022-01-11",
-      "description": "Трудовой договор",
-      "invoiceType": null,
-      "user_id": 31
-    },
-    {
-      "id": 11,
-      "documentType": "счет-фактура",
-      "documentNumber": 963,
-      "documentDate": "2022-08-12",
-      "description": "Покупка офисной мебели",
-      "invoiceType": "стандартная",
-      "user_id": null
-    },
-    {
       "id": 12,
       "documentType": "счет-фактура",
       "documentNumber": 147,
