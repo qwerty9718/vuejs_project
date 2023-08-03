@@ -415,6 +415,10 @@
       "active": true
     }
   ],
+
+
+
+
   "document": [
     {
       "id": 1,
@@ -425,16 +429,316 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
+
+
     {
       "id": 2,
+      "documentType": "счет-фактура",
+      "documentNumber": 325,
+      "documentDate": "2022-02-15",
+      "description": "Ремонт водопровода",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+
+
+    {
+      "id": 3,
+      "documentType": "доверенность",
+      "documentNumber": 4322,
+      "documentDate": "2022-01-02",
+      "description": "Заявление о выдаче паспорта",
+      "invoiceType": null,
+      "user_id": 8
+    },
+    {
+      "id": 4,
+      "documentType": "доверенность",
+      "documentNumber": 4323,
+      "documentDate": "2022-01-03",
+      "description": "Уведомление об отзыве лицензии",
+      "invoiceType": null,
+      "user_id": 11
+    },
+    {
+      "id": 5,
+      "documentType": "доверенность",
+      "documentNumber": 4324,
+      "documentDate": "2022-01-04",
+      "description": "Договор аренды недвижимости",
+      "invoiceType": null,
+      "user_id": 20
+    },
+
+
+
+    {
+      "id": 6,
+      "documentType": "счет-фактура",
+      "documentNumber": 456,
+      "documentDate": "2021-09-05",
+      "description": "Получение оборудования",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+    {
+      "id": 7,
+      "documentType": "счет-фактура",
+      "documentNumber": 852,
+      "documentDate": "2022-06-25",
+      "description": "Выдача материалов",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+
+    {
+      "id": 8,
+      "documentType": "счет-фактура",
+      "documentNumber": 369,
+      "documentDate": "2021-11-15",
+      "description": "Оплата за услугу связи",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+    {
+      "id": 9,
+      "documentType": "счет-фактура",
+      "documentNumber": 741,
+      "documentDate": "2022-07-07",
+      "description": "Проверка бухгалтерии",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+
+    {
+      "id": 10,
+      "documentType": "доверенность",
+      "documentNumber": 4331,
+      "documentDate": "2022-01-11",
+      "description": "Трудовой договор",
+      "invoiceType": null,
+      "user_id": 31
+    },
+
+
+    {
+      "id": 11,
+      "documentType": "счет-фактура",
+      "documentNumber": 963,
+      "documentDate": "2022-08-12",
+      "description": "Покупка офисной мебели",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 12,
+      "documentType": "счет-фактура",
+      "documentNumber": 147,
+      "documentDate": "2021-12-10",
+      "description": "Аренда офисного помещения",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 13,
+      "documentType": "счет-фактура",
+      "documentNumber": 369,
+      "documentDate": "2022-05-05",
+      "description": "Оплата за электроэнергию",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 14,
+      "documentType": "счет-фактура",
+      "documentNumber": 741,
+      "documentDate": "2021-10-20",
+      "description": "Оплата за аренду транспорта",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+
+    {
+      "id": 15,
+      "documentType": "доверенность",
+      "documentNumber": 4328,
+      "documentDate": "2022-01-08",
+      "description": "Протокол собрания акционеров",
+      "invoiceType": null,
+      "user_id": 8
+    },
+
+
+    {
+      "id": 16,
+      "documentType": "счет-фактура",
+      "documentNumber": 963,
+      "documentDate": "2021-09-01",
+      "description": "Оплата за рекламные услуги",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 17,
+      "documentType": "счет-фактура",
+      "documentNumber": 147,
+      "documentDate": "2022-02-25",
+      "description": "Оплата за аренду компьютеров",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 18,
+      "documentType": "счет-фактура",
+      "documentNumber": 369,
+      "documentDate": "2021-07-15",
+      "description": "Отгрузка товара",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+    {
+      "id": 19,
+      "documentType": "счет-фактура",
+      "documentNumber": 741,
+      "documentDate": "2022-03-07",
+      "description": "Оказание маркетинговых услуг",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+    {
+      "id": 20,
+      "documentType": "счет-фактура",
+      "documentNumber": 258,
+      "documentDate": "2021-11-22",
+      "description": "Покупка нового программного обеспечения",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+
+
+    {
+      "id": 21,
+      "documentType": "доверенность",
+      "documentNumber": 4329,
+      "documentDate": "2022-01-09",
+      "description": "Исковое заявление о разводе",
+      "invoiceType": null,
+      "user_id": 10
+    },
+
+
+    {
+      "id": 22,
+      "documentType": "счет-фактура",
+      "documentNumber": 789,
+      "documentDate": "2021-05-20",
+      "description": "Оказание услуги",
+      "invoiceType": "стандартная",
+      "user_id": null
+    },
+
+    {
+      "id": 23,
+      "documentType": "счет-фактура",
+      "documentNumber": 987,
+      "documentDate": "2022-03-10",
+      "description": "Покупка продуктов",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+
+
+    {
+      "id": 24,
+      "documentType": "доверенность",
+      "documentNumber": 4325,
+      "documentDate": "2022-01-05",
+      "description": "Расписка о получении денежных средств",
+      "invoiceType": null,
+      "user_id": 21
+    },
+    {
+      "id": 25,
+      "documentType": "доверенность",
+      "documentNumber": 4326,
+      "documentDate": "2022-01-06",
+      "description": "Соглашение о разделе имущества",
+      "invoiceType": null,
+      "user_id": 20
+    },
+    {
+      "id": 26,
+      "documentType": "доверенность",
+      "documentNumber": 4327,
+      "documentDate": "2022-01-07",
+      "description": "Заключение о состоянии здоровья",
+      "invoiceType": null,
+      "user_id": 20
+    },
+
+    {
+      "id": 27,
+      "documentType": "счет-фактура",
+      "documentNumber": 258,
+      "documentDate": "2022-04-15",
+      "description": "Покупка офисных расходных материалов",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+
+    {
+      "id": 28,
+      "documentType": "счет-фактура",
+      "documentNumber": 512,
+      "documentDate": "2020-08-01",
+      "description": "Отгрузка товара",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+
+    {
+      "id": 29,
+      "documentType": "доверенность",
+      "documentNumber": 4330,
+      "documentDate": "2022-01-10",
+      "description": "Справка об отсутствии судимости",
+      "invoiceType": null,
+      "user_id": 8
+    },
+
+    {
+      "id": 30,
+      "documentType": "счет-фактура",
+      "documentNumber": 258,
+      "documentDate": "2021-03-22",
+      "description": "Совещание",
+      "invoiceType": "дополнительная",
+      "user_id": null
+    },
+
+
+    {
+      "id": 31,
       "documentType": "доверенность",
       "documentNumber": 4321,
       "documentDate": "2022-01-01",
       "description": "Доверенность",
       "invoiceType": null,
-      "user_id": 3
+      "user_id": 2
     }
+
+
   ],
+
+
+
+
+
   "menu": [
     {
       "id": 1,

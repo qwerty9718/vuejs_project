@@ -61,9 +61,9 @@
       <div class="container-fluid">
         <nav aria-label="Page navigation example" v-if="totalPage && this.searchQuery === ''">
           <ul class="pagination">
-            <li class="page-item"><a class="page-link" @click.prevent="nextPage('-')">пред</a></li>
+            <li class="page-item paginate"><a class="page-link" @click.prevent="nextPage('-')">пред</a></li>
             <li class="page-item"  v-for="total in totalPage"><a class="page-link" @click.prevent="paginateUsers(total)">{{total}}</a></li>
-            <li class="page-item"><a class="page-link" @click.prevent="nextPage('+')">след</a></li>
+            <li class="page-item paginate"><a class="page-link" @click.prevent="nextPage('+')">след</a></li>
           </ul>
         </nav>
       </div>
@@ -149,4 +149,10 @@ export default defineComponent({
 
 <style scoped>
 
+
+@media only screen and (max-width: 410px) {
+  .paginate{
+    display: none;
+  }
+}
 </style>
