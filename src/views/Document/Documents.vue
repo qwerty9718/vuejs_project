@@ -57,6 +57,16 @@
           </template>
           </tbody>
         </table>
+
+        <div class="container-fluid">
+          <nav aria-label="Page navigation example" v-if="totalPage">
+            <ul class="pagination">
+              <li class="page-item paginate"><a class="page-link" @click.prevent="nextPage('-')">пред</a></li>
+              <li class="page-item"  v-for="total in totalPage"><a class="page-link" @click.prevent="pagination(total)">{{total}}</a></li>
+              <li class="page-item paginate"><a class="page-link" @click.prevent="nextPage('+')">след</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -77,13 +87,18 @@ export default defineComponent({
     return {
       documents: [],
       showUpdateId: null,
-      updateDocument:{documentType:'', documentNumber:null, documentDate:null,description:'',invoiceType:'',id:null}
+      updateDocument:{documentType:'', documentNumber:null, documentDate:null,description:'',invoiceType:'',id:null},
+      page: 1,
+      limit:10,
+      totalPage:null
     }
   },
 
   methods: {
     async getDocuments() {
-      const response = await axios.get('http://localhost:3000/document');
+      const response = await axios.get('http://localhost:3000/document',
+          {params:{_page: this.page, _limit:this.limit}});
+      this.totalPage = Math.ceil(response.headers['x-total-count'] / this.limit);
       this.documents = response.data;
 
       for (let i = 0; i <response.data.length ; i++) {
@@ -108,6 +123,23 @@ export default defineComponent({
       const response = await axios.patch('http://localhost:3000/document/'+this.updateDocument.id,data);
       this.showUpdateId = null;
       this.getDocuments();
+    },
+
+
+    pagination(page){
+      this.page = page;
+      this.getDocuments();
+    },
+
+    nextPage(data){
+      if (data === '-' && this.page > 0){
+        this.page-=1;
+        this.getDocuments();
+      }
+      if (data === '+' && this.page < this.totalPage){
+        this.page+=1;
+        this.getDocuments();
+      }
     }
 
   },

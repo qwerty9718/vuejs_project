@@ -8,6 +8,7 @@
         <h3 v-if="user.gender === '' ? user.gender = 'Не указан' : user.gender">Пол: {{user.gender}}</h3>
 
 
+      <!--  Список документов пользователя  -->
       <div class="container mt-5">
         <div v-if="documents" v-for="document in documents" :key="document.id" class="document">
 
