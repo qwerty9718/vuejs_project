@@ -415,22 +415,16 @@
       "active": true
     }
   ],
-
-
-
-
   "document": [
     {
       "id": 1,
       "documentType": "счет-фактура",
       "documentNumber": 124,
-      "documentDate": "2022-01-01",
-      "description": "Оплата за товар",
+      "documentDate": "2018-01-10",
+      "description": "Оплата за товар ",
       "invoiceType": "стандартная",
       "user_id": null
     },
-
-
     {
       "id": 2,
       "documentType": "счет-фактура",
@@ -440,9 +434,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
-
-
     {
       "id": 3,
       "documentType": "доверенность",
@@ -470,9 +461,6 @@
       "invoiceType": null,
       "user_id": 20
     },
-
-
-
     {
       "id": 6,
       "documentType": "счет-фактура",
@@ -482,7 +470,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
     {
       "id": 7,
       "documentType": "счет-фактура",
@@ -492,7 +479,6 @@
       "invoiceType": "дополнительная",
       "user_id": null
     },
-
     {
       "id": 8,
       "documentType": "счет-фактура",
@@ -502,7 +488,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
     {
       "id": 9,
       "documentType": "счет-фактура",
@@ -512,8 +497,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
-
     {
       "id": 10,
       "documentType": "доверенность",
@@ -523,8 +506,6 @@
       "invoiceType": null,
       "user_id": 31
     },
-
-
     {
       "id": 11,
       "documentType": "счет-фактура",
@@ -561,8 +542,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
-
     {
       "id": 15,
       "documentType": "доверенность",
@@ -572,8 +551,6 @@
       "invoiceType": null,
       "user_id": 8
     },
-
-
     {
       "id": 16,
       "documentType": "счет-фактура",
@@ -619,8 +596,6 @@
       "invoiceType": "дополнительная",
       "user_id": null
     },
-
-
     {
       "id": 21,
       "documentType": "доверенность",
@@ -630,8 +605,6 @@
       "invoiceType": null,
       "user_id": 10
     },
-
-
     {
       "id": 22,
       "documentType": "счет-фактура",
@@ -641,7 +614,6 @@
       "invoiceType": "стандартная",
       "user_id": null
     },
-
     {
       "id": 23,
       "documentType": "счет-фактура",
@@ -651,8 +623,6 @@
       "invoiceType": "дополнительная",
       "user_id": null
     },
-
-
     {
       "id": 24,
       "documentType": "доверенность",
@@ -680,7 +650,6 @@
       "invoiceType": null,
       "user_id": 20
     },
-
     {
       "id": 27,
       "documentType": "счет-фактура",
@@ -690,7 +659,6 @@
       "invoiceType": "дополнительная",
       "user_id": null
     },
-
     {
       "id": 28,
       "documentType": "счет-фактура",
@@ -700,7 +668,6 @@
       "invoiceType": "дополнительная",
       "user_id": null
     },
-
     {
       "id": 29,
       "documentType": "доверенность",
@@ -710,7 +677,6 @@
       "invoiceType": null,
       "user_id": 8
     },
-
     {
       "id": 30,
       "documentType": "счет-фактура",
@@ -720,8 +686,6 @@
       "invoiceType": "дополнительная",
       "user_id": null
     },
-
-
     {
       "id": 31,
       "documentType": "доверенность",
@@ -731,14 +695,7 @@
       "invoiceType": null,
       "user_id": 2
     }
-
-
   ],
-
-
-
-
-
   "menu": [
     {
       "id": 1,
