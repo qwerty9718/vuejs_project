@@ -29,6 +29,12 @@ const routes = [
   },
 
   {
+    path: '/documents/:id',
+    name: 'documents.single',
+    component: () => import( '@/views/Document/SinglePage')
+  },
+
+  {
     path: '/documents-create',
     name: 'documents.create',
   },

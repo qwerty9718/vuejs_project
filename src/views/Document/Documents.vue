@@ -30,7 +30,7 @@
             <td><router-link :to="{name:'users.single', params: { id: `${document.user_id}` }}">{{document.user}}</router-link></td>
             <td>
               <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-primary btn-fw">Открыть</button>
+                <button type="button" class="btn btn-outline-primary btn-fw" @click="this.$router.push('/documents/'+document.id)">Открыть</button>
                 <button type="button" class="btn btn-outline-success btn-fw" @click="getUpdateId(document.id,document.documentType,document.documentNumber,document.documentDate,document.description,document.invoiceType)">Изменить</button>
                 <button type="button" class="btn btn-outline-danger btn-fw">Удалить</button>
               </div>
