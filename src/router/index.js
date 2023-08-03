@@ -3,6 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
 
+
+  {
+    path: '/',
+    name: 'main',
+    component: () => import( '@/views/Main')
+  },
   {
     path: '/users',
     name: 'users',
@@ -38,6 +44,12 @@ const routes = [
     path: '/documents-create',
     name: 'documents.create',
     component: () => import('@/views/Document/CreateDocument')
+  },
+
+  {
+    path: '/:catchAll(.*)',
+    component: () => import('@/views/Page404'),
+    name:'404'
   },
 ]
 
