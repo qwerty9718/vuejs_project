@@ -37,6 +37,7 @@ const routes = [
   {
     path: '/documents-create',
     name: 'documents.create',
+    component: () => import('@/views/Document/CreateDocument')
   },
 ]
 

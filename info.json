@@ -676,6 +676,24 @@
       "description": "Доверенность",
       "invoiceType": null,
       "user_id": 2
+    },
+    {
+      "documentType": "",
+      "documentNumber": null,
+      "documentDate": "",
+      "description": "",
+      "invoiceType": "",
+      "user_id": null,
+      "id": 32
+    },
+    {
+      "documentType": "asdasd",
+      "documentNumber": 123123,
+      "documentDate": "2023-08-11",
+      "description": "asdasd",
+      "invoiceType": "asdasdasd",
+      "user_id": 14,
+      "id": 33
     }
   ],
   "menu": [
