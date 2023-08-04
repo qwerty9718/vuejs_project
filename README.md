@@ -10,9 +10,12 @@ npm install
 ```
 Для запуска Приложения
 npm run serve
-```
+
+
 Для запуска Json server
 json-server info.json
+```
+
 
 
 ### Compiles and minifies for production
